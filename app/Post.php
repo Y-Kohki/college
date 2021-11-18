@@ -4,7 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+ dev_basis02
+
+class Post extends Model
+{
+
+public function getPaginateByLimit(int $limit_count = 5)
+{
+    // updated_atで降順に並べたあと、limitで件数制限をかける
+    return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
+}
+
+=======
 class Post extends Model
 {
     //
+ master
 }
