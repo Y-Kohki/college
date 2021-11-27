@@ -9,6 +9,7 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
+ dev_basis03
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
     }
    
@@ -16,4 +17,12 @@ class PostController extends Controller
     {
         return view('posts/show')->with(['post' => $post]);
     } 
+=======
+ dev_basis02
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+=======
+        return $post->get();
+ master
+    }
+ master
 }
