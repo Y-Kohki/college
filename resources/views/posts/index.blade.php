@@ -11,7 +11,13 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
+ dev_basis03
+                    <h2 class='title'>
+                        <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                    </h2>
+=======
                     <h2 class='title'>{{ $post->title }}</h2>
+ master
                     <p class='body'>{{ $post->body }}</p>
                 </div>
             @endforeach
