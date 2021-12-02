@@ -8,7 +8,10 @@
     </head>
     <body>
         <h1>Blog Name</h1>
+ dev_basis05
+=======
  dev_basis04
+ master
             [<a href='/posts/create'>create</a>]
         <div class='posts'>
             @foreach ($posts as $post)
@@ -16,6 +19,8 @@
                     <h2 class='title'>
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
+ dev_basis05
+=======
 =======
         <div class='posts'>
             @foreach ($posts as $post)
@@ -26,6 +31,7 @@
                     </h2>
 =======
                     <h2 class='title'>{{ $post->title }}</h2>
+ master
  master
  master
                     <p class='body'>{{ $post->body }}</p>
