@@ -9,7 +9,10 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+ dev_basis05
         <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
+=======
+ master
         <h1 class="title">
             {{ $post->title }}
         </h1>

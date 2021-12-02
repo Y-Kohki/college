@@ -3,12 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+ dev_basis05
 use App\Http\Requests\PostRequest; // useする
+=======
+ dev_basis04
+use App\Http\Requests\PostRequest; // useする
+=======
+use Illuminate\Http\Request;
+ master
+ master
 
 class PostController extends Controller
 {
     public function index(Post $post)
     {
+ dev_basis05
+=======
+ dev_basis04
+ master
         return view('posts/index')->with(['posts' => $post->getPaginate()]);
     }
 
@@ -28,6 +40,7 @@ class PostController extends Controller
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
+ dev_basis05
     
     public function edit(Post $post)
     {
@@ -42,3 +55,25 @@ class PostController extends Controller
         return redirect('/posts/' . $post->id);
     }
 }
+=======
+}
+=======
+ dev_basis03
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+    }
+   
+    public function show(Post $post)
+    {
+        return view('posts/show')->with(['post' => $post]);
+    } 
+=======
+ dev_basis02
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+=======
+        return $post->get();
+ master
+    }
+ master
+}
+ master
+ master
