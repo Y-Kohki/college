@@ -43,7 +43,7 @@ public function getPaginateByLimit(int $limit_count = 5)
  master
 {
     // updated_atで降順に並べたあと、limitで件数制限をかける
-    return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    return $this::with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
 }
  dev_basis06
 =======
@@ -71,6 +71,7 @@ public function getByLimit(int $limit_count = 10)
 protected $fillable = [
     'title',
     'body',
+    'category_id'
 ];
 
  dev_basis06
@@ -82,6 +83,13 @@ public function getPaginate()
     return $this->orderBy('updated_at','DESC')->paginate(5);
 }
 
+<<<<<<< HEAD
+
+
+public function category()
+{
+    return $this->belongsTo('App\Category');
+=======
  dev_basis06
 =======
 =======
@@ -97,4 +105,6 @@ class Post extends Model
  master
  master
  master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
+}
 }

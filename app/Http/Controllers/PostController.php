@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Post;
  dev_basis06
 use App\Http\Requests\PostRequest; // useする
+<<<<<<< HEAD
+use App\Category;
+=======
 =======
  dev_basis05
 use App\Http\Requests\PostRequest; // useする
@@ -16,6 +19,7 @@ use Illuminate\Http\Request;
  master
  master
  master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
 
 class PostController extends Controller
 {
@@ -36,10 +40,10 @@ class PostController extends Controller
         return view('posts/show')->with(['post' => $post]);
     }
 
-    public function create()
-    {
-        return view('posts/create');
-    }
+   // public function create()
+    //{
+    //    return view('posts/create');
+    //}
 
     public function store(Post $post, PostRequest $request) // 引数をRequest->PostRequestにする
     {
@@ -71,6 +75,14 @@ class PostController extends Controller
         $post->delete();
         return redirect('/');
     }
+<<<<<<< HEAD
+    
+    public function create(Category $category)
+    {
+        return view('posts/create')->with(['categories' => $category->get()]);;
+    }
+}
+=======
 }
 =======
 }
@@ -97,3 +109,4 @@ class PostController extends Controller
  master
  master
  master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1

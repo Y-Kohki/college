@@ -20,6 +20,9 @@ Route::delete('/posts/{post}', 'PostController@delete');
 Route::get('/posts/{post}/edit', 'PostController@edit');
 Route::put('/posts/{post}', 'PostController@update');
 Route::post('/posts', 'PostController@store');
+<<<<<<< HEAD
+Route::get('/categories/{category}', 'CategoryController@index');
+=======
 =======
  dev_basis05
 Route::get('/', 'PostController@index');
@@ -48,3 +51,4 @@ Route::get('/posts', 'PostController@index');
  master
  master
  master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
