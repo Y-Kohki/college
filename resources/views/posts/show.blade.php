@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+ dev_basis06
         <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
         <form action="/posts/{{ $post->id }}" id="form_delete" method="post">
             @csrf
@@ -17,6 +18,12 @@
             <p>[<span onclick='return deletePost(this);'>delete</span>]</p> 
 
         </form>
+=======
+ dev_basis05
+        <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
+=======
+ master
+ master
         <h1 class="title">
             {{ $post->title }}
         </h1>
@@ -31,7 +38,11 @@
             <a href="">{{ $post->category->name }}</a>
             <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         </div>
+<<<<<<< HEAD
         
+=======
+ dev_basis06
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
         <script>
             function deletePost(e){
                 'use strict';
@@ -40,5 +51,7 @@
                 }
             }
         </script>
+=======
+ master
     </body>
 </html>

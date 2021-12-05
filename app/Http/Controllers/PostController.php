@@ -3,13 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+ dev_basis06
 use App\Http\Requests\PostRequest; // useする
+<<<<<<< HEAD
 use App\Category;
+=======
+=======
+ dev_basis05
+use App\Http\Requests\PostRequest; // useする
+=======
+ dev_basis04
+use App\Http\Requests\PostRequest; // useする
+=======
+use Illuminate\Http\Request;
+ master
+ master
+ master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
 
 class PostController extends Controller
 {
     public function index(Post $post)
     {
+ dev_basis06
+=======
+ dev_basis05
+=======
+ dev_basis04
+ master
+ master
         return view('posts/index')->with(['posts' => $post->getPaginate()]);
     }
 
@@ -29,6 +51,10 @@ class PostController extends Controller
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
+ dev_basis06
+=======
+ dev_basis05
+ master
     
     public function edit(Post $post)
     {
@@ -42,15 +68,45 @@ class PostController extends Controller
 
         return redirect('/posts/' . $post->id);
     }
+ dev_basis06
     
     public function delete(Post $post)
     {
         $post->delete();
         return redirect('/');
     }
+<<<<<<< HEAD
     
     public function create(Category $category)
     {
         return view('posts/create')->with(['categories' => $category->get()]);;
     }
 }
+=======
+}
+=======
+}
+=======
+}
+=======
+ dev_basis03
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+    }
+   
+    public function show(Post $post)
+    {
+        return view('posts/show')->with(['post' => $post]);
+    } 
+=======
+ dev_basis02
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+=======
+        return $post->get();
+ master
+    }
+ master
+}
+ master
+ master
+ master
+>>>>>>> af3352e6b10bf5697dfdc9d7af5b0a1e818f54a1
